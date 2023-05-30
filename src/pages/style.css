@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair:wght@300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Playfair', serif; */
+
+body{
+    font-family: 'Playfair', serif !important; 
+}
+
+.cart_icon{
+    font-size: 30px;
+}
+
+.Profile-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+
+    font-size: 25px !important;
+    color: black !important;
+
+}
+
+.slider{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.slider img{
+    height: 70vh;
+
+}
+
+.arrival{
+    display: flex;
+    justify-content: center;
+}
+
+.arrival p{
+    width: 80%;
+}
+
+.footer_menu ul{
+    font-family: 'Playfair', serif; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+.footer_menu ul li{
+    list-style-type: none; 
+    margin: 8px 0px;
+    cursor: pointer;
+}
+
+.footer_bg{
+    background-color: #F5F5F3;
+}
+
+.footer_padding{
+    padding: 50px 0px;
+}
