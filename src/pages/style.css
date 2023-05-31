@@ -66,3 +66,32 @@ body{
 .footer_padding{
     padding: 50px 0px;
 }
+
+.banner_img{
+    background-image: url("../../public/image/BANNER.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer_design{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 350px;
+
+}
+
+.clock{
+    /* border: 1px solid red; */
+    padding: 5px 30px;
+    margin-right: 10px;
+}
+
+.time, .time-text{
+    font-size: 40px;
+}

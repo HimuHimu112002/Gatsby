@@ -2,58 +2,85 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
 const Banner = () => {
-    const [timeDay, settimeDay] = useState('00')
-    const [timeHour, settimeHour] = useState('00')
-    const [timeMinute, settimeMinute] = useState('00')
-    const [timeSec, settimeSec] = useState('00')
 
-    let interval = useRef()
+    const [countdownDate, setCountdownDate] = useState(new Date('5/31/2023').getTime());
+  const [state, setState] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
-    const startTimer = ()=>{
-        const countdownDate = new Date('May 30, 2023 00:00:00').getTime();
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000);
+  }, []);
 
-        interval = setInterval(()=>{
-            const now = new Date().getTime()
-            const distance = countdownDate - now
+  const setNewTime = () => {
+    if (countdownDate) {
+      const currentTime = new Date().getTime();
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-            const hour = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)))
-            const minute = Math.floor((distance % (1000 * 60 * 60) / (1000 * 60)))
-            const sec = Math.floor((distance % (1000 * 60)) / 1000)
+      const distanceToDate = countdownDate - currentTime;
 
-            if(distance < 0){
-                clearInterval(interval.current);
-            }else{
-                settimeDay(days)
-                settimeHour(hour)
-                settimeMinute(minute)
-                settimeSec(sec)
-            }
+      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
+        (distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      let minutes = Math.floor(
+        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60),
+      );
+      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
 
-        }, 1000)
+      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+      days = `${days}`;
+      if (numbersToAddZeroTo.includes(hours)) {
+        hours = `0${hours}`;
+      } else if (numbersToAddZeroTo.includes(minutes)) {
+        minutes = `0${minutes}`;
+      } else if (numbersToAddZeroTo.includes(seconds)) {
+        seconds = `0${seconds}`;
+      }
+
+      setState({ days: days, hours: hours, minutes, seconds });
     }
+  };
 
-    useEffect(()=>{
-        startTimer();
-        return()=>{
-            clearInterval(interval.current);
-        }
-    })
-    //let a = Date()
+    
   return (
     <Container>
         <Row className='py-4'>
-            <Col>
-                <img className='img-fluid' src='image/BANNER.png'>
+            <h1 className='text-center py-5'>Comming Soon</h1>
+            <Col className='banner_img'>
+                
+                <div className='timer_design'>
 
-                    
-                </img>
+                    <div className='clock shadow rounded text-center'>
 
-                {/* <p>{timeDay}</p>
-                <p>{timeHour}</p>
-                <p>{timeMinute}</p>
-                <p>{timeSec}</p> */}
+                        <small className="time-text">Days</small>
+                        <div className='time'>{state.days || '0'}</div>
+                    </div>
+
+                    <div className='clock shadow rounded text-center'>
+
+                        <small className="time-text">Hours</small>
+                        <div className='time'>{state.hours || '00'}</div>
+                    </div>
+
+                    <div className='clock shadow rounded text-center'>
+
+                        <small className="time-text">Minutes</small>
+                        <div className='time'>{state.minutes || '00'}</div>
+                    </div>
+
+                    <div className='clock shadow rounded text-center'>
+
+                        <small className="time-text">Seconds</small>
+                        <div className='time'>{state.seconds || '00'}</div>
+                    </div>
+
+                </div>
+
+
             </Col>
         </Row>
     </Container>
