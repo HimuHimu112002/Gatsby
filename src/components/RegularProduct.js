@@ -6,7 +6,7 @@ import RegularProductCard from './RegularProductCard'
 const RegularProduct = () => {
   return (
     <Container className='py-4'>
-        <Row>
+        <Row className='center_align'>
 
             <div className='text-center arrival pb-4'>
                 <div>
@@ -16,15 +16,15 @@ const RegularProduct = () => {
                 </div>
             </div>
 
-            <Col className='mb-2' md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <RegularProductCard price="price : $25" title="Basic Crew Neck Tee" img="image/p1.png"></RegularProductCard>
             </Col>
 
-            <Col className='mb-2' md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <RegularProductCard price="price : $50" title="Smart Watch" img="image/p2.png"></RegularProductCard>
             </Col>
 
-            <Col className='mb-2' md="4">
+            <Col sm="10" md="6" lg="4">
                 <RegularProductCard price="price : $10" title="Smart Product" img="image/p3.png"></RegularProductCard>
 
             </Col>

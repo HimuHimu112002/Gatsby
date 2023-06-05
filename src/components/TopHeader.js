@@ -1,38 +1,29 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
+import { Col, Container, Row,Nav,Navbar} from 'react-bootstrap'
+import {Link} from 'gatsby'
 
 const TopHeader = () => {
   return (
-    <Container fluid>
-        <Row>
 
-            <Col className='logo text-center pt-3' md="2">
-                <h4>Gatsby</h4>
-            </Col>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#">Gatsby</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="m-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Link to='/About'><Nav.Link href="#action2">About</Nav.Link></Link>
+            <Nav.Link href="#action2">Pricing</Nav.Link>
+            <Nav.Link href="#action2">Contact</Nav.Link>
+          </Nav>
 
-            <Col bg="dark" md="10">
-      
-                <Navbar variant="light">
-
-                    <Nav className="m-auto">
-
-                        <Nav.Link className='px-4' href="#home">Home</Nav.Link>
-                        <Nav.Link className='px-4' href="#features">About</Nav.Link>
-                        <Nav.Link className='px-4' href="#pricing">Product</Nav.Link>
-                        <Nav.Link className='px-4' href="#pricing">Pricing</Nav.Link>
-                        <Nav.Link className='px-4' href="#pricing">Contact</Nav.Link>
-
-                    </Nav>
-        
-                </Navbar>
-
-            </Col>
-            
-        </Row>
-    </Container>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
   )
 }

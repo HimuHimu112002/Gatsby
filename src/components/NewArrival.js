@@ -12,7 +12,7 @@ const NewArrival = () => {
 
   return (
     <Container className='py-4'>
-        <Row>
+        <Row className='center_align'>
 
             <div className='text-center arrival pb-4'>
                 <div>
@@ -22,15 +22,15 @@ const NewArrival = () => {
                 </div>
             </div>
 
-            <Col md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $125" title={first_Card} img="image/en7.jpg"></ArrivalCard>
             </Col>
 
-            <Col md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $325" title={second_Card} img="image/ne1.jpg"></ArrivalCard>
             </Col>
 
-            <Col md="4">
+            <Col sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $25" title={third_Card} img="image/en7.jpg"></ArrivalCard>
             </Col>
             

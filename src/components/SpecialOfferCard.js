@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 const SpecialOfferCard = () => {
   return (
-    <Card style={{ width: '25rem' }}>
+    <Card className='w-100'>
         <Card.Img variant="top" src={props.img} />
             <Card.Body>
                 <h4>{props.title}</h4>

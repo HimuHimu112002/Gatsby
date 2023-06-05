@@ -10,7 +10,7 @@ const SpecialOffer = () => {
     let third_Card = "Smart Sunglass"
   return (
     <Container className='py-4'>
-        <Row>
+        <Row className='center_align'>
 
             <div className='text-center arrival pb-4'>
                 <div>
@@ -20,15 +20,15 @@ const SpecialOffer = () => {
                 </div>
             </div>
 
-            <Col md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $10" title={first_Card} img="image/p7.png"></ArrivalCard>
             </Col>
 
-            <Col md="4">
+            <Col className='mb-4' sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $20" title={second_Card} img="image/p8.png"></ArrivalCard>
             </Col>
 
-            <Col md="4">
+            <Col sm="10" md="6" lg="4">
                 <ArrivalCard price="price : $25" title={third_Card} img="image/p9.png"></ArrivalCard>
             </Col>
             

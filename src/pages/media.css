@@ -1,0 +1,18 @@
+@media(min-width:320px) and (max-width:766px){
+    .center_align{
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+}
+
+@media(min-width:320px) and (max-width:992px){
+    .time, .time-text{
+        font-size: 15px;
+    }
+    .timer_design{
+        width: auto;
+    }
+    
+}

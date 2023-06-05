@@ -10,6 +10,10 @@ body{
     font-family: 'Playfair', serif !important; 
 }
 
+a{
+    text-decoration: none !important;
+}
+
 .cart_icon{
     font-size: 30px;
 }
@@ -21,7 +25,6 @@ body{
 }
 
 .nav-link{
-
     font-size: 25px !important;
     color: black !important;
 
@@ -79,15 +82,15 @@ body{
 }
 
 .timer_design{
+    width: 800px;
+    padding: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    margin-left: 350px;
 
 }
 
 .clock{
-    /* border: 1px solid red; */
     padding: 5px 30px;
     margin-right: 10px;
 }
@@ -95,3 +98,12 @@ body{
 .time, .time-text{
     font-size: 40px;
 }
+
+.published{
+    background-color: rgb(25, 199, 126);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 30px;
+    color: white;
+}
+
